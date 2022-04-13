@@ -24,8 +24,8 @@ class MainView(View):
                 comment=form.cleaned_data.get('comment'),
             )
             context = {
-                "users": Customer.objects.all(),
-                "title": "Profile"
+                'form': WriteLineForm(),
+                'title': "Форма для ввода данных",
             }
             firstname = form.cleaned_data.get('firstname')
             lastname = form.cleaned_data.get('lastname')
